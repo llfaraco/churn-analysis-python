@@ -17,10 +17,10 @@ A análise foi conduzida utilizando Python e bibliotecas amplamente utilizadas e
 O churn (cancelamento) é um dos principais desafios de empresas que operam com receita recorrente.  
 Este projeto busca responder:
 
-- Quais fatores mais influenciam o churn?  
-- Existem padrões de comportamento entre clientes que cancelam?  
-- Quais segmentos apresentam maior risco?  
-- Como variáveis como atrasos, suporte e ticket médio se relacionam com o cancelamento?
+- Quais fatores mais influenciam o churn  
+- Existem padrões de comportamento entre clientes que cancelam  
+- Quais segmentos apresentam maior risco  
+- Como variáveis como atrasos, suporte e ticket médio se relacionam com o cancelamento  
 
 ---
 
@@ -67,14 +67,16 @@ As principais visualizações geradas no notebook incluem:
 1. Clone este repositório:
    ```bash
    git clone https://github.com/llfaraco/churn-analysis-python.git
+Instale as dependências:
 
-2. Instale as dependências: pip install -r requirements.txt
+bash
+pip install -r requirements.txt
+Abra o notebook:
 
-3. Abra o notebook: jupyter notebook notebooks/churn_analysis.ipynb
-
-## 📁 Estrutura do Repositório
-
-```text
+bash
+jupyter notebook notebooks/churn_analysis.ipynb
+📁 Estrutura do Repositório
+text
 churn-analysis-python/
 │
 ├── data/
@@ -90,3 +92,16 @@ churn-analysis-python/
 │   └── churn_analysis.ipynb
 │
 └── README.md
+🚀 Próximos Passos
+Criar um modelo preditivo de churn (Logistic Regression, Random Forest).
+
+Implementar um dashboard interativo (Power BI ou Streamlit).
+
+Criar um score de risco para priorização de clientes.
+
+Automatizar o pipeline de ingestão e limpeza de dados.
+
+📬 Contato
+Se quiser trocar uma ideia sobre o projeto ou oportunidades:
+
+Lucas Faraco 📧 llfaraco@gmail.com 🔗 https://www.linkedin.com/in/llfaraco
