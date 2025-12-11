@@ -30,21 +30,21 @@ A análise foi construída em **Jupyter Notebook**, utilizando bibliotecas como 
 
 ### ✅ **1. Taxa de Churn por Canal**
 <p align="center">
-  <img src="images/churn_por_canal_v3.png" width="600">
+  <img src="images/churn_por_canal.png" width="600">
 </p>
 
 ---
 
 ### ✅ **2. Atrasos de Pagamento x Churn**
 <p align="center">
-  <img src="images/churn_atrasos_pagamento_v3.png" width="600">
+  <img src="images/churn_atrasos_pagamento.png" width="600">
 </p>
 
 ---
 
 ### ✅ **3. Matriz de Correlação**
 <p align="center">
-  <img src="images/matriz_correlacao_v3.png" width="600">
+  <img src="images/matriz_correlacao.png" width="600">
 </p>
 
 ---
