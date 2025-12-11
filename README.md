@@ -5,14 +5,14 @@ A análise foi conduzida utilizando Python e bibliotecas amplamente utilizadas e
 
 ---
 
-## 🔗 Acesso Rápido
+## 🔗 Acesso rápido
 
 - 📘 **Notebook completo:** [notebooks/churn_analysis.ipynb](notebooks/churn_analysis.ipynb)  
 - 📊 **Dataset utilizado:** [data/churn_clientes.csv](data/churn_clientes.csv)
 
 ---
 
-## 🧠 Objetivo do Projeto
+## 🧠 Objetivo do projeto
 
 O churn (cancelamento) é um dos principais desafios de empresas que operam com receita recorrente.  
 Este projeto busca responder:
@@ -24,7 +24,7 @@ Este projeto busca responder:
 
 ---
 
-## 🔍 Principais Insights
+## 🔍 Principais insights
 
 - Clientes com maior número de **atrasos de pagamento** apresentam maior probabilidade de churn.  
 - Segmentos com **menor ticket médio** concentram proporcionalmente mais cancelamentos.  
@@ -38,11 +38,11 @@ Este projeto busca responder:
 
 As principais visualizações geradas no notebook incluem:
 
-| Churn por Segmento | Churn por Canal |
+| Churn por segmento | Churn por canal |
 |--------------------|-----------------|
 | ![](images/churn_por_segmento.png) | ![](images/churn_por_canal.png) |
 
-| Tempo de Casa | Correlação |
+| Tempo de casa | Correlação |
 |----------------|------------|
 | ![](images/churn_tempo_de_casa.png) | ![](images/matriz_correlacao.png) |
 
@@ -50,7 +50,7 @@ As principais visualizações geradas no notebook incluem:
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias utilizadas
 
 - **Python**
   - pandas  
@@ -62,37 +62,15 @@ As principais visualizações geradas no notebook incluem:
 
 ---
 
-## ▶️ Como Reproduzir o Projeto
+## ▶️ Como reproduzir o projeto
 
 1. Clone este repositório:
    ```bash
    git clone https://github.com/llfaraco/churn-analysis-python.git
-Instale as dependências:
+2. Instale as dependências: pip install -r requirements.txt
+3. Abra o notebook:jupyter notebook notebooks/churn_analysis.ipynb
 
-bash
-pip install -r requirements.txt
-Abra o notebook:
-
-bash
-jupyter notebook notebooks/churn_analysis.ipynb
-📁 Estrutura do Repositório
-text
-churn-analysis-python/
-│
-├── data/
-│   └── churn_clientes.csv
-│
-├── images/
-│   ├── churn_por_segmento.png
-│   ├── churn_por_canal.png
-│   ├── churn_tempo_de_casa.png
-│   └── matriz_correlacao.png
-│
-├── notebooks/
-│   └── churn_analysis.ipynb
-│
-└── README.md
-🚀 Próximos Passos
+🚀 Próximos passos
 Criar um modelo preditivo de churn (Logistic Regression, Random Forest).
 
 Implementar um dashboard interativo (Power BI ou Streamlit).
