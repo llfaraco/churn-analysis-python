@@ -1,0 +1,150 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 📉 Churn Analysis com Python\n",
+    "\n",
+    "Análise exploratória de churn usando Python, pandas e seaborn."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt\n",
+    "import seaborn as sns\n",
+    "\n",
+    "sns.set(style=\"whitegrid\")\n",
+    "plt.rcParams['figure.figsize'] = (10, 6)\n",
+    "\n",
+    "df = pd.read_csv(\"../data/churn_clientes.csv\")\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.info()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.describe(include=\"all\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "churn_rate = df['churn'].mean()\n",
+    "print(f\"Taxa geral de churn: {churn_rate:.2%}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "segment_churn = df.groupby('segmento')['churn'].mean().sort_values(ascending=False)\n",
+    "segment_churn"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sns.barplot(x=segment_churn.index, y=segment_churn.values)\n",
+    "plt.title('Taxa de churn por segmento')\n",
+    "plt.ylabel('Taxa de churn')\n",
+    "plt.xlabel('Segmento')\n",
+    "plt.xticks(rotation=0)\n",
+    "plt.tight_layout()\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "canal_churn = df.groupby('canal')['churn'].mean().sort_values(ascending=False)\n",
+    "canal_churn"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sns.barplot(x=canal_churn.index, y=canal_churn.values)\n",
+    "plt.title('Taxa de churn por canal')\n",
+    "plt.ylabel('Taxa de churn')\n",
+    "plt.xlabel('Canal')\n",
+    "plt.xticks(rotation=0)\n",
+    "plt.tight_layout()\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sns.boxplot(x='churn', y='atrasos_pagamento', data=df)\n",
+    "plt.title('Atrasos de pagamento por status de churn')\n",
+    "plt.xlabel('Churn (0 = ativo, 1 = cancelado)')\n",
+    "plt.ylabel('Atrasos de pagamento')\n",
+    "plt.tight_layout()\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "corr = df[['idade','tempo_de_casa_meses','ticket_medio','atrasos_pagamento','atendimentos_suporte','churn']].corr()\n",
+    "\n",
+    "sns.heatmap(corr, annot=True, cmap='Blues')\n",
+    "plt.title('Matriz de correlação')\n",
+    "plt.tight_layout()\n",
+    "plt.show()"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "name": "python",
+   "version": "3.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
