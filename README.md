@@ -46,7 +46,6 @@ As principais visualizações geradas no notebook incluem:
 |----------------|------------|
 | ![](images/churn_tempo_de_casa.png) | ![](images/matriz_correlacao.png) |
 
-> As imagens acima são placeholders. Quando você gerar os gráficos no Jupyter, basta substituir os arquivos na pasta `images/`.
 
 ---
 
