@@ -1,77 +1,88 @@
-# 📉 Análise de Churn em Python
+<h1 align="center">📉 Churn Analysis em Python</h1>
 
-Este projeto apresenta uma análise exploratória de churn com o objetivo de identificar padrões de cancelamento, entender o comportamento dos clientes e destacar fatores que influenciam a retenção.  
-A análise foi conduzida utilizando Python e bibliotecas amplamente utilizadas em ciência de dados.
+<p align="center">
+  <strong>Análise exploratória completa para identificar padrões de cancelamento, risco e comportamento do cliente.</strong>
+</p>
 
----
-
-## 🔗 Acesso rápido
-
-- 📘 **Notebook completo:** [notebooks/churn_analysis.ipynb](notebooks/churn_analysis.ipynb)  
-- 📊 **Dataset utilizado:** [data/churn_clientes.csv](data/churn_clientes.csv)
-
----
-
-## 🧠 Objetivo do projeto
-
-O churn (cancelamento) é um dos principais desafios de empresas que operam com receita recorrente.  
-Este projeto busca responder:
-
-- Quais fatores mais influenciam o churn  
-- Existem padrões de comportamento entre clientes que cancelam  
-- Quais segmentos apresentam maior risco  
-- Como variáveis como atrasos, suporte e ticket médio se relacionam com o cancelamento  
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue" />
+  <img src="https://img.shields.io/badge/Status-Concluído-brightgreen" />
+  <img src="https://img.shields.io/badge/Notebook-Jupyter-orange" />
+  <img src="https://img.shields.io/badge/Análise-EDA-yellow" />
+</p>
 
 ---
 
-## 🔍 Principais insights
+## 📌 **Sobre o Projeto**
 
-- Clientes com maior número de **atrasos de pagamento** apresentam maior probabilidade de churn.  
-- Segmentos com **menor ticket médio** concentram proporcionalmente mais cancelamentos.  
-- **Queda de uso** do produto é um forte indicador de risco.  
-- Clientes que acionam muito o **suporte** tendem a cancelar mais.  
-- A matriz de correlação reforça que **engajamento e comportamento financeiro** são fatores críticos.
+Este projeto realiza uma análise exploratória de churn utilizando Python, com foco em:
 
----
+- Identificar padrões de cancelamento  
+- Avaliar comportamento de clientes  
+- Detectar fatores de risco  
+- Apoiar decisões estratégicas de retenção  
 
-## 📊 Visualizações
-
-As principais visualizações geradas no notebook incluem:
-
-| Churn por segmento | Churn por canal |
-|--------------------|-----------------|
-| ![](images/churn_por_segmento.png) | ![](images/churn_por_canal.png) |
-
-| Tempo de casa | Correlação |
-|----------------|------------|
-| ![](images/churn_tempo_de_casa.png) | ![](images/matriz_correlacao.png) |
-
+A análise foi construída em **Jupyter Notebook**, utilizando bibliotecas como `pandas`, `seaborn` e `matplotlib`.
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## 📊 **Principais Visualizações**
 
-- **Python**
-  - pandas  
-  - numpy  
-  - seaborn  
-  - matplotlib  
-- **Jupyter Notebook**  
-- **Git & GitHub**
+### ✅ **1. Taxa de Churn por Canal**
+<p align="center">
+  <img src="images/churn_por_canal_v3.png" width="600">
+</p>
 
 ---
 
-## ▶️ Como reproduzir o projeto
+### ✅ **2. Atrasos de Pagamento x Churn**
+<p align="center">
+  <img src="images/churn_atrasos_pagamento_v3.png" width="600">
+</p>
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/llfaraco/churn-analysis-python.git
-2. Instale as dependências: 
-   ```
-   pip install -r requirements.txt
-3. Abra o notebook:
-   ```
-   jupyter notebook notebooks/churn_analysis.ipynb
+---
+
+### ✅ **3. Matriz de Correlação**
+<p align="center">
+  <img src="images/matriz_correlacao_v3.png" width="600">
+</p>
+
+---
+
+## ✅ **Principais Insights**
+
+📌 **Clientes com mais atrasos de pagamento têm maior probabilidade de churn**  
+A relação é clara: quanto maior o número de atrasos, maior o risco de cancelamento.
+
+📌 **Canais específicos apresentam churn acima da média**  
+Isso pode indicar problemas de comunicação, onboarding ou segmentação.
+
+📌 **Ticket médio mais baixo está associado a maior churn**  
+Clientes de menor valor tendem a cancelar mais rápido.
+
+📌 **Menor tempo de casa = maior risco**  
+Clientes novos são mais sensíveis à experiência inicial.
+
+---
+
+## 🧠 **Tecnologias Utilizadas**
+
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- Jupyter Notebook  
+
+---
+
+## 🚀 **Como Executar**
+
+```bash
+git clone https://github.com/llfaraco/churn-analysis-python
+cd churn-analysis-python
+jupyter notebook
+
 
 🚀 Próximos passos
 Criar um modelo preditivo de churn (Logistic Regression, Random Forest).
