@@ -67,9 +67,11 @@ As principais visualizações geradas no notebook incluem:
    ```bash
    git clone https://github.com/llfaraco/churn-analysis-python.git
 2. Instale as dependências: 
-   ```pip install -r requirements.txt
+   ```
+   pip install -r requirements.txt
 3. Abra o notebook:
-   ```jupyter notebook notebooks/churn_analysis.ipynb
+   ```
+   jupyter notebook notebooks/churn_analysis.ipynb
 
 🚀 Próximos passos
 Criar um modelo preditivo de churn (Logistic Regression, Random Forest).
