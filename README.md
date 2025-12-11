@@ -72,7 +72,10 @@ As principais visualizações geradas no notebook incluem:
 
 3. Abra o notebook: jupyter notebook notebooks/churn_analysis.ipynb
 
-4. churn-analysis-python/
+## 📁 Estrutura do Repositório
+
+```text
+churn-analysis-python/
 │
 ├── data/
 │   └── churn_clientes.csv
@@ -87,4 +90,3 @@ As principais visualizações geradas no notebook incluem:
 │   └── churn_analysis.ipynb
 │
 └── README.md
-
